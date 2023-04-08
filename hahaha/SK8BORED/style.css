@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Russo+One&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background-color: rgb(17, 17, 17);
+    color: rgb(243, 243, 243);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+    display: inline-block;
+}
+ul{
+    list-style-type: none;
+}
+header{
+    height: 6%;
+    background: transparent;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+    z-index: 99;
+    transition: height 0.3s ease 0s;
+
+}
+
+header.shrink{
+    height: 60px;
+    background: rgba(44, 44, 44, 0.349);
+}
+
+.logo{
+    letter-spacing: 5px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.navbarlist{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.list{
+    display: flex;
+    pointer-events: visible;
+}
+
+.list > li > a {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    color:rgb(182, 182, 182);
+}
+
+.list > li > a:active {
+    font-size: 1.56rem;
+    color: white;
+    font-weight: bolder;
+}
+
+.list > li ~ li {
+    margin-left: 10%;
+}
+
+.list > li > a:hover {
+    color: white;
+}
+
+.navy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navy li a {
+    font-size: 1rem;
+}
+.navy li a svg {
+    font-size: 1rem;
+}
+.navy > li > a:hover {
+    color: white;
+}
+
+.navy > li ~ li {
+    margin-left: 15%;
+}
+
+.hero{
+    height: 100vh;
+    padding-top: 6%;
+    position: relative;
+}
+
+.slider-container {
+    height: 100%;
+    position: relative;
+}
+
+.slide{
+    display: flex;
+    height: 0;
+    overflow: hidden;
+}
+
+.slide.active {
+    height: 100%;
+
+}
+
+.slide-img{
+    width: 50%;
+    padding-right: 60px;
+    padding-top: 80px;
+    z-index: 1;
+}
+
+.slide-img img{
+    width: 100%;
+    transform: rotate(-70deg);
+    transform-origin: bottom;
+    opacity: 0;
+    transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity .45s ease 0s;
+}
+
+.slide.active .slide-img > img {
+    transform: rotate(0);
+    opacity: 1;
+}
+
+.slide-txt {
+    width: 50%;
+    padding-left: 3.5vw;
+    padding-top: 4vh;
+}
+
+.slide-title{
+    width: max-content;
+}
+
+.slide-title h3 {
+    font-size: 10.5rem;
+    color: white;
+    text-transform: capitalize;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Russo One', sans-serif;
+    -webkit-text-stroke-width: 1px;
+    letter-spacing: 5px;
+    transform: translateX(-200px);
+    transition: transform 0.3s ease 0s;
+}
+
+.slide.active .slide-title > h3 {
+    transform: translateX(0);
+}
+
+.slide-desc, .slide-btn {
+    margin-top: 68px;
+}
+
+.slide-desc > p {
+    font-size: 1.4rem;
+    color: rgb(228, 228, 228);
+    transition-delay: 0.3s;
+}
+
+.hero-button {
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 50px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: transform .3s ease 0s;
+}
+
+.slide-desc > p, 
+.slide-btn {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform .3s ease 0s, opacity 0.2s ease 0s;
+}
+
+.slide.active .slide-desc > p, 
+.slide-btn {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.slide-btn {
+    transition-delay: 0.6s;
+}
+
+.hero-button:hover {
+    transform: translateY(-10px);
+}
+
+.hero-text {
+    position: absolute;
+    top: 44vh;
+    right: -15vw;
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    letter-spacing: 16px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 8.4rem;
+    color: rgb(43, 43, 43);
+    z-index: -1;
+
+}
+.dimension{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: #0B0B0B;
+}
+.spline{
+    width: 70%;
+    height: 100%;
+}
+
+.diemension-title {
+    position: absolute;
+    top: 40%;
+    right:0%;
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    font-size: 8rem;
+    font-weight: 900;
+    letter-spacing: 30px;
+    font-family: 'Russo One', sans-serif;
+}

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Russo+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.container101{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.card101{
+    transition: 0.5s ease;
+    transform-style: preserve-3d;
+    min-height: 80vh;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.726), 0 0 50px rgba(0, 0, 0, 0.541);
+    width: 50%;
+    border-radius: 30px;
+    padding: 0 10%;
+}
+
+.skate101{
+    min-height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle101{
+    width: 13vw;
+    height: 13vw;
+    background: linear-gradient(to right, rgba(60, 179, 149, 0.6), rgba(196, 79, 180, 0.6));
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.skate101 img{
+    transition: all 0.35s ease;
+    width: 90%;
+    z-index: 2;
+}
+
+.text101 h1{
+    font-size: 2.6rem;
+}
+
+.text101 h3{
+    font-size: 1.5rem;
+    color: rgb(77, 77, 77);
+    font-weight: lighter;
+    
+}
+.btn101 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn101 button{
+    padding: 0.2vh 2.2vh;
+    background: transparent;
+    border: none;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.527);
+    border-radius: 20px;
+    color: rgb(78, 78, 78);
+}
+
+button.active {
+    background: rgb(19, 19, 19);
+    font-weight: 750;
+    color: rgb(224, 178, 224);
+}
+
+.buy101{
+    padding-top: 5vh;
+}
+
+.buy101 button{
+    width: 100%;
+    padding: 0.6vw 2.2vw;
+    background: linear-gradient(to right, rgb(250, 121, 211), rgb(135, 255, 245));
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.card101:hover {
+    transform: scale(1.5);
+}
